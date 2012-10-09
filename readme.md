@@ -35,18 +35,29 @@
 </pre>
 
 <h2>Configuring</h2>
-<p>There are five configurable options on initalization:</p>
+<p>There are five <i>optional</i> configurable options on initialization :</p>
 <pre><code>
 
 $(".livepreview").livePreview({
-    viewWidth: '300',  //the preview dialog width,  default = 300px
-    viewHeight: '200',  //the preview dialog height,  default = 200px
-    targetWidth: '1000',  //the viewport size width of the site you are previewing, default = 1000px
-    targetHeight: '800',  //the viewport size height of the site you are previewing, default = 800px
-    scale: '0.5', //the scaling of the viewport size (this is the CSS transform scale property),  default = calculated automatically
+    viewWidth: '300',  
+    viewHeight: '200',  
+    targetWidth: '1000',  
+    targetHeight: '800',  
+    scale: '0.5', 
 });
 
 </code></pre>
+
+<ul>
+    <li>viewWidth :: the preview dialog width,  default = 300px</li>
+    <li>viewHeight :: the preview dialog height,  default = 200px</li>
+    <li>targetWidth :: the viewport size width of the site you are previewing, default = 1000px</li>
+    <li>targetHeight :: //the viewport size height of the site you are previewing, default = 800px</li>
+    <li>scale :: the scaling of the viewport size (this is the CSS transform scale property),  default = calculated automatically <br/>
+    Notes: If no scaling is specified, then the scaling is automatically calculated to provide the best fit to the preview dialog window.</li>
+<li>
+</ul>
+
 
 <p>That's it! See example for more usage.</p>
 
