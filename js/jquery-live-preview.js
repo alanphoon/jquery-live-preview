@@ -1,5 +1,5 @@
 /***********************************************
-Jquery Live Preview Plugin:: Created by Alan Phoon (http://www.ampedupdesigns.com)
+Jquery Live Link Preview Plugin:: Created by Alan Phoon (http://www.ampedupdesigns.com)
 This notice MUST stay intact for legal use.
 ***********************************************/
 (function($) {
