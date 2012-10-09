@@ -44,15 +44,14 @@
     <li><strong>viewHeight</strong> :: the preview dialog height,  default = 200px</li>
     <li><strong>targetWidth</strong> :: the viewport size width of the site you are previewing, default = 1000px</li>
     <li><strong>targetHeight</strong> :: the viewport size height of the site you are previewing, default = 800px</li>
-    <li><strong>scale</strong> :: the scaling of the viewport size of the site you are previewing (this is the CSS transform scale property),  default = calculated automatically <br/>
-    Notes: If no scaling is specified, then the scaling is automatically calculated to provide the best fit to the preview dialog window size.</li>
+    <li><strong>scale</strong> :: the scaling of the viewport size of the site you are previewing (this is the CSS transform scale property),  default = calculated automatically. Notes: If no scaling is specified, then the scaling is automatically calculated to provide the best fit to the preview dialog window size.</li>
 </ul>
 
 <h2>Notes</h2>
 <p>- When this plugin is triggered (via the hover over event), the preview dialog is added to the body and the iframe is created using the href attribute of the element.  This means that you can add the appropriate class to any DOM element so long as the href attribute is present:</p>
 <pre><code>&lt;button class="livepreview" href="http://www.google.com"&gt;Hover over me!&lt;/button&gt;
 &lt;img class="livepreview" src="/images/someimage.jpg" href="http://www.yahoo.com" /&gt;</code></pre>
-<p>- For now, please note that the preview dialog that is dynamically created has a fixed <strong>id</strong> name of <i>livepreview_dialog</i></p>
-<p>- For proper usage, detect if the browser can support css3 3d transforms, Modernizr is a great js library that provides this functionality.</p>
+<p>- For now, please note that the preview dialog that is dynamically created has a fixed <strong>id</strong> name of <i>livepreview_dialog</i><br/>
+- For proper usage, detect if the browser can support css3 3d transforms, Modernizr is a great js library that provides this functionality.</p>
 <p>That's it! See example for more usage.</p>
 
