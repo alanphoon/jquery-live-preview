@@ -1,3 +1,7 @@
+/***********************************************
+Jquery Live Preview Plugin:: Created by Alan Phoon (http://www.ampedupdesigns.com)
+This notice MUST stay intact for legal use.
+***********************************************/
 (function($) {
   $.fn.extend({
      livePreview: function(options){
