@@ -14,12 +14,12 @@
 
 <h2>Usage</h2>
 <p>Add a custom CSS class to the link (or element) you want to preview:</p>
-<pre><code>/<a href="http://www.bing.com" target="_blank" class="livepreview">Hover over to preview, click to link!/</a></code></pre>
+<pre><code>&#60;a href="http://www.bing.com" target="_blank" class="livepreview"&#62;Hover over to preview, click to link!/&#60;/a&#62;</code></pre>
 <p>Initialize and bind to your preferred CSS class after page load:</p>
 <pre><code>$(".livepreview").livePreview();</code></pre>
 <p>Make sure to add the CSS styling to the preview window:</p>
 <pre><code>
-    <script>
+    &#60;style&#62;
     #livepreview_dialog
     {
         padding:0px;
@@ -32,6 +32,8 @@
         overflow:hidden;
         position:absolute;
     }
-    </script>
+    &#60;/script&#62;
 </code>
 </pre>
+
+<p>That's it! See example for more usage.</p>
