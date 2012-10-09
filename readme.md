@@ -13,12 +13,13 @@
 <p>This plugin essentially provides an iframe window which is scaled down inside a dialog window for preview.</p>
 
 <h2>Usage</h2>
-<p>Initialize and bind to your preferred CSS class:</p>
+<p>Add a custom CSS class to the link (or element) you want to preview:</p>
+<pre><code>/<a href="http://www.bing.com" target="_blank" class="livepreview">Hover over to preview, click to link!/</a></code></pre>
+<p>Initialize and bind to your preferred CSS class after page load:</p>
 <pre><code>$(".livepreview").livePreview();</code></pre>
-<p>Add the CSS class to the link you want to preview:</p>
-<pre><code><a href="http://www.bing.com" target="_blank" class="livepreview">Hover over to preview, click to link!</a></code></pre>
 <p>Make sure to add the CSS styling to the preview window:</p>
 <pre><code>
+    <script>
     #livepreview_dialog
     {
         padding:0px;
@@ -31,5 +32,6 @@
         overflow:hidden;
         position:absolute;
     }
+    </script>
 </code>
 </pre>
