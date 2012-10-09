@@ -30,7 +30,7 @@
         overflow:hidden;
         position:absolute;
     }
-    </script>
+    </style>
 </code>
 </pre>
 
