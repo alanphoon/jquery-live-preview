@@ -53,13 +53,10 @@ $(".livepreview").livePreview({
 </ul>
 
 <h2>Notes</h2>
-<p>When this plugin is triggered (via the hover over event), the preview dialog is added to the body and the iframe is created using the href attribute of the element.  This means that you can add the appropriate class to any DOM element so long as the href attribute is present:</p>
-<pre><code>
-&lt;button class="livepreview" href="http://www.google.com"&gt;Hover over me!&lt;/button&gt;
-
-&lt;img class="livepreview" src="/images/someimage.jpg" href="http://www.yahoo.com" /&gt;
-</code></pre>
-<p>For now, please note that the preview dialog that is created has a fixed id called <i>livepreview_dialog</i></p>
-
+<p>- When this plugin is triggered (via the hover over event), the preview dialog is added to the body and the iframe is created using the href attribute of the element.  This means that you can add the appropriate class to any DOM element so long as the href attribute is present:</p>
+<pre><code>&lt;button class="livepreview" href="http://www.google.com"&gt;Hover over me!&lt;/button&gt;
+&lt;img class="livepreview" src="/images/someimage.jpg" href="http://www.yahoo.com" /&gt;</code></pre>
+<p>- For now, please note that the preview dialog that is dynamically created has a fixed <strong>id</strong> name of <i>livepreview_dialog</i></p>
+<p>- For proper usage, detect if the browser can support css3 3d transforms, Modernizr is a great js library that provides this functionality.</p>
 <p>That's it! See example for more usage.</p>
 
