@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Jquery Live Preview Example</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+        <script src="/js/jquery-live-preview.js"></script>
+        
+        <style>
+            #livepreview_dialog
+            {
+                padding:0px;
+                height:200px;
+                width:300px;
+                background-color:#fff;
+                background-image:url('/images/icon_loading.gif');
+                background-repeat:no-repeat;
+                background-position:center center;
+                overflow:hidden;
+                position:absolute;
+            }
+        </style>
+        
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".livepreview").livePreview();
+            });
+        </script>
+        
+    </head>
+    <body>
+        <h3>Jquery Live Preview Example</h3>
+        <a href="http://www.bing.com" target="_blank" class="livepreview">Hover over to preview, click to link!</a>
+    </body>
+</html>
