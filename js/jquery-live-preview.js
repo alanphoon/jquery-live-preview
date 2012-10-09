@@ -21,7 +21,6 @@ This notice MUST stay intact for legal use.
              scale_f = options.scale;
          else
          {
-             console.log('calculate');
              if(scale_w > scale_h)
                  scale_f = scale_w;
              else
