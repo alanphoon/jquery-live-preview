@@ -5,7 +5,6 @@ This notice MUST stay intact for legal use.
 (function($) {
   $.fn.extend({
      livePreview: function(options){
-         
          var defaults = {
              targetWidth : 1000,
              targetHeight: 800,
@@ -45,12 +44,8 @@ This notice MUST stay intact for legal use.
                 $('#livepreview_dialog').fadeOut(100, function() {
                     $("#livepreview_dialog").remove();
                 });
-
             });
-             
          });
      }
-      
   });
-  
 })(jQuery);
