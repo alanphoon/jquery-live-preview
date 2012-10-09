@@ -15,9 +15,8 @@
 <pre><code>&#60;a href="http://www.bing.com" target="_blank" <strong>class="livepreview"</strong>&#62;Hover over to preview, click to link!/&#60;/a&#62;</code></pre>
 <p>Initialize and bind to your preferred CSS class on page ready:</p>
 <pre><code>$(".livepreview").livePreview();</code></pre>
-<p>Make sure to add the CSS styling for the preview window (feel free to make it your own look):</p>
-<pre><code>
-    #livepreview_dialog
+<p>Make sure to add the CSS styling for the preview dialog window (feel free to make it your own look):</p>
+<pre><code>#livepreview_dialog
     {
         padding:0px;
         height:200px;
@@ -28,21 +27,18 @@
         background-position:center center;
         overflow:hidden;
         position:absolute;
-    }
-</code>
+    }</code>
 </pre>
 
 <h2>Configuring</h2>
 <p>There are five <i>optional</i> configurable options on initialization :</p>
-<pre><code>
-$(".livepreview").livePreview({
+<pre><code>$(".livepreview").livePreview({
     viewWidth: '300',  
     viewHeight: '200',  
     targetWidth: '1000',  
     targetHeight: '800',  
     scale: '0.5', 
-});
-</code></pre>
+});</code></pre>
 <ul>
     <li><strong>viewWidth</strong> :: the preview dialog width,  default = 300px</li>
     <li><strong>viewHeight</strong> :: the preview dialog height,  default = 200px</li>
