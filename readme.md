@@ -55,9 +55,9 @@ $(".livepreview").livePreview({
 <h2>Notes</h2>
 <p>When this plugin is triggered (via the hover over event), the preview dialog is added to the body and the iframe is created using the href attribute of the element.  This means that you can add the appropriate class to any DOM element so long as the href attribute is present:</p>
 <pre><code>
-<button class="livepreview" href="http://www.google.com">Hover over me!</button>
+&lt;button class="livepreview" href="http://www.google.com"&gt;Hover over me!&lt;/button&gt;
 
-<img class="livepreview" src="/images/someimage.jpg" href="http://www.yahoo.com" />
+&lt;img class="livepreview" src="/images/someimage.jpg" href="http://www.yahoo.com" /&gt;
 </code></pre>
 <p>For now, please note that the preview dialog that is created has a fixed id called <i>livepreview_dialog</i></p>
 
