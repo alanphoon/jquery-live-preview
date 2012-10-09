@@ -17,7 +17,6 @@
 <pre><code>$(".livepreview").livePreview();</code></pre>
 <p>Make sure to add the CSS styling for the preview window (feel free to make it your own look):</p>
 <pre><code>
-    <style>
     #livepreview_dialog
     {
         padding:0px;
@@ -30,14 +29,12 @@
         overflow:hidden;
         position:absolute;
     }
-    </style>
 </code>
 </pre>
 
 <h2>Configuring</h2>
 <p>There are five <i>optional</i> configurable options on initialization :</p>
 <pre><code>
-
 $(".livepreview").livePreview({
     viewWidth: '300',  
     viewHeight: '200',  
@@ -45,18 +42,24 @@ $(".livepreview").livePreview({
     targetHeight: '800',  
     scale: '0.5', 
 });
-
 </code></pre>
-<p>Options:</p>
 <ul>
     <li><strong>viewWidth</strong> :: the preview dialog width,  default = 300px</li>
     <li><strong>viewHeight</strong> :: the preview dialog height,  default = 200px</li>
     <li><strong>targetWidth</strong> :: the viewport size width of the site you are previewing, default = 1000px</li>
     <li><strong>targetHeight</strong> :: the viewport size height of the site you are previewing, default = 800px</li>
-    <li><strong>scale</strong> :: the scaling of the viewport size (this is the CSS transform scale property),  default = calculated automatically <br/>
+    <li><strong>scale</strong> :: the scaling of the viewport size of the site you are previewing (this is the CSS transform scale property),  default = calculated automatically <br/>
     Notes: If no scaling is specified, then the scaling is automatically calculated to provide the best fit to the preview dialog window size.</li>
 </ul>
 
+<h2>Notes</h2>
+<p>When this plugin is triggered (via the hover over event), the preview dialog is added to the body and the iframe is created using the href attribute of the element.  This means that you can add the appropriate class to any DOM element so long as the href attribute is present:</p>
+<pre><code>
+<button class="livepreview" href="http://www.google.com">Hover over me!</button>
+
+<img class="livepreview" src="/images/someimage.jpg" href="http://www.yahoo.com" />
+</code></pre>
+<p>For now, please note that the preview dialog that is created has a fixed id called <i>livepreview_dialog</i></p>
 
 <p>That's it! See example for more usage.</p>
 
