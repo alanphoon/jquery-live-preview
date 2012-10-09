@@ -1,7 +1,7 @@
 <h1>Jquery Live Preview Plugin</h1>
 
 <p>The Jquery Live Preview Plugin is a simple Jquery Plugin that allows you to see a <strong>live</strong> scaled preview of the site you are linking to in a pop-up dialog style window prior to you clicking on it. </p>
-<p>Use on any link (or DOM element with a href attribute) by adding the corresponding css class, no more prepping preview images for user hover-over previews; let the user see exactly what they will see when they click on the link.</p>
+<p>Use on any link (or DOM element with a href attribute) by adding the corresponding css class, no more prepping preview images for user hover-over previews; let the user see exactly what they will see before they click on the link.</p>
 
 <h2>Requirements</h2>
 <ul>
