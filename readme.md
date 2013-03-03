@@ -38,6 +38,7 @@
     targetWidth: '1000',  
     targetHeight: '800',  
     scale: '0.5', 
+    position: 'left'
 });</code></pre>
 <ul>
     <li><strong>viewWidth</strong> :: the preview dialog width,  default = 300px</li>
@@ -45,6 +46,7 @@
     <li><strong>targetWidth</strong> :: the viewport size width of the site you are previewing, default = 1000px</li>
     <li><strong>targetHeight</strong> :: the viewport size height of the site you are previewing, default = 800px</li>
     <li><strong>scale</strong> :: the scaling of the viewport size of the site you are previewing (this is the CSS transform scale property),  default = calculated automatically. Notes: If no scaling is specified, then the scaling is automatically calculated to provide the best fit to the preview dialog window size.</li>
+    <li><strong>position<strong> :: side to which the preview will open, default = left</li>
 </ul>
 
 <h2>Notes</h2>
