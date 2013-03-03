@@ -9,7 +9,9 @@ This notice MUST stay intact for legal use.
              targetWidth : 1000,
              targetHeight: 800,
              viewWidth: 300,
-             viewHeight: 200
+             viewHeight: 200,
+             position: 'right',
+             positionOffset: 50
          }
          var options = $.extend(defaults, options);
          //calculate appropriate scaling based on width.
@@ -30,11 +32,14 @@ This notice MUST stay intact for legal use.
             var s = scale_f;
             var obj = $(this);
             var href = $(this).attr("href");
-            var pos = $(this).offset();
-            var width = $(this).width();
-            var leftpos = pos.left + width + 50;
-            var toppos = pos.top - (o.viewHeight/2);
+            
             obj.hover(function() {
+                var pos = $(this).offset();
+                var width = $(this).width();
+                var leftpos = pos.left + width + o.positionOffset;
+                if(o.position == 'left')
+                    leftpos = pos.left - o.viewWidth - o.positionOffset;
+                var toppos = pos.top - (o.viewHeight/2);
                 //hover on 
                 $('body').append('<div id="livepreview_dialog" style="display:none; padding:0px; border-radius:5px; left: ' + leftpos + 'px; top:' + toppos + 'px; width: ' + o.viewWidth + 'px; height: ' + o.viewHeight + 'px"><iframe id="livepreview_iframe" src="' + href + '" style="border-radius:5px; -moz-border-radius: 5px; height:' + o.targetHeight + 'px; width:' + o.targetWidth + 'px;-moz-transform: scale('+ s + ');-moz-transform-origin: 0 0;-o-transform: scale('+ s + ');-o-transform-origin: 0 0;-webkit-transform: scale('+ s + ');-webkit-transform-origin: 0 0;"></iframe></div>');
                 $('#livepreview_dialog').fadeIn(100);
