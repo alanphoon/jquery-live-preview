@@ -57,5 +57,5 @@
 &lt;img class="livepreview" src="/images/someimage.jpg" href="http://www.yahoo.com" /&gt;</code></pre>
 <p>- For now, please note that the preview dialog that is dynamically created has a fixed <strong>id</strong> name of <i>livepreview_dialog</i><br/>
 - For proper usage, detect if the browser can support css3 3d transforms, Modernizr is a great js library that provides this functionality.</p>
-<p>That's it! See example for more usage.</p>
+<p>That's it! See <a href="http://www.ampedupdesigns.com/blog/show?bid=49">example here</a> for usage.</p>
 
