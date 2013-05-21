@@ -31,7 +31,7 @@
 </pre>
 
 <h2>Configuring</h2>
-<p>There are five <i>optional</i> configurable options on initialization :</p>
+<p>There are seven <i>optional</i> configurable options on initialization :</p>
 <pre><code>$(".livepreview").livePreview({
     viewWidth: 300,  
     viewHeight: 200,  
@@ -48,7 +48,7 @@
     <li><strong>targetHeight</strong> :: the viewport size height of the site you are previewing, default = 800px</li>
     <li><strong>scale</strong> :: the scaling of the viewport size of the site you are previewing (this is the CSS transform scale property),  default = calculated automatically. Notes: If no scaling is specified, then the scaling is automatically calculated to provide the best fit to the preview dialog window size.</li>
     <li><strong>offset</strong> :: the offset from the target in pixels, default = 50px</li>
-    <li><strong>position</strong> :: side to which the preview will open, default = right</li>
+    <li><strong>position</strong> :: side to which the preview will open, left or right, default = right</li>
 </ul>
 
 <h2>Notes</h2>
