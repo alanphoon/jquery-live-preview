@@ -9,6 +9,8 @@
     <li>Browsers that support CSS3 3D Transform properties (Chrome, Firefox, Safari, IE10+).</li>
 </ul>
 
+<h2>Limitations</h2>
+<p>certain sites may have set their X-FRAME-OPTIONS header policy to SAMEORGIN or DENY.  This is specifically to prevent other sites from iframing their site for obvious reasons.  If that is the case, this plugin will not work, and it's best to respect the site owner's wishes. </p>
 
 <h2>Usage</h2>
 <p>Add a custom CSS class to the link (or DOM element with an added <i>href</i> attribute) you want to preview:</p>
