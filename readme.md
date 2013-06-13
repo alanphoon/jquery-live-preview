@@ -6,7 +6,7 @@
 <h2>Requirements</h2>
 <ul>
     <li>Jquery must be loaded.</li>
-    <li>Browsers that support CSS3 3D Transform properties (Chrome, Firefox, Safari, IE10+).</li>
+    <li>Modern Browsers that support CSS3 3D Transform properties (Chrome, Firefox, Safari, IE10+).</li>
 </ul>
 
 <h2>Limitations</h2>
