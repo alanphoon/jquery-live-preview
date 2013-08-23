@@ -52,8 +52,8 @@
 <h3>Inline Data Attributes</h3>
 <p>The following data attributes may be used inline and will override any initialized or default settings:</p>
 <ul>
-    <li><strong>data-offset :: overrides offset setting</strong></li>
-    <li><strong>data-position :: overrides the position placement setting</strong></li>
+    <li><strong>data-offset</strong> :: overrides offset setting</li>
+    <li><strong>data-position</strong> :: overrides the position placement setting</li>
 </ul>
 <p>Example:</p>
 <pre><code>&#60;a href="http://www.cnn.com" class="livepreview" data-offset="20" data-position="left" &#62;Hover over this link&#60;/a&#62;</pre></code>
