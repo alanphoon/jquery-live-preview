@@ -1,6 +1,9 @@
 /***********************************************
-Jquery Live Link Preview Plugin:: Created by Alan Phoon (http://www.ampedupdesigns.com)
-This notice MUST stay intact for legal use.
+Jquery Live Link Preview Plugin
+Copyright (c) 2012 Alan Phoon, www.ampedupdesigns.com  
+This notice MUST stay intact for legal use and may not be modified.
+
+Licensed under GNU GENERAL PUBLIC LICENSE
 ***********************************************/
 (function($) {
   $.fn.extend({
@@ -32,6 +35,12 @@ This notice MUST stay intact for legal use.
             var s = scale_f;
             var obj = $(this);
             var href = $(this).attr("href");
+
+            if($(this).attr("data-position"))
+                o.position = $(this).attr("data-position");
+
+            if($(this).attr("data-positionOffset"))
+                o.positionOffset = $(this).attr("data-positionOffset");
             
             obj.hover(function() {
                 var pos = $(this).offset();
@@ -41,14 +50,14 @@ This notice MUST stay intact for legal use.
                     leftpos = pos.left - o.viewWidth - o.positionOffset;
                 var toppos = pos.top - (o.viewHeight/2);
                 //hover on 
-                $('body').append('<div id="livepreview_dialog" style="display:none; padding:0px; border-radius:5px; left: ' + leftpos + 'px; top:' + toppos + 'px; width: ' + o.viewWidth + 'px; height: ' + o.viewHeight + 'px"><iframe id="livepreview_iframe" src="' + href + '" style="border-radius:5px; -moz-border-radius: 5px; height:' + o.targetHeight + 'px; width:' + o.targetWidth + 'px;-moz-transform: scale('+ s + ');-moz-transform-origin: 0 0;-o-transform: scale('+ s + ');-o-transform-origin: 0 0;-webkit-transform: scale('+ s + ');-webkit-transform-origin: 0 0;"></iframe></div>');
+                $('body').append('<div id="livepreview_dialog" class="' + o.position + '" style="display:none; padding:0px; left: ' + leftpos + 'px; top:' + toppos + 'px; width: ' + o.viewWidth + 'px; height: ' + o.viewHeight + 'px"><div class="livepreview-container" style="overflow:hidden; width: ' + o.viewWidth + 'px; height: ' + o.viewHeight + 'px"><iframe id="livepreview_iframe" src="' + href + '" style="height:' + o.targetHeight + 'px; width:' + o.targetWidth + 'px;-moz-transform: scale('+ s + ');-moz-transform-origin: 0 0;-o-transform: scale('+ s + ');-o-transform-origin: 0 0;-webkit-transform: scale('+ s + ');-webkit-transform-origin: 0 0;"></iframe></div></div>');
                 $('#livepreview_dialog').fadeIn(100);
             },
             function() {
                 //hover off
-                $('#livepreview_dialog').fadeOut(100, function() {
-                    $("#livepreview_dialog").remove();
-                });
+                
+                $("#livepreview_dialog").remove();
+                
             });
          });
      }
