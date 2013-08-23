@@ -19,7 +19,7 @@
 <p>Make sure to add the CSS styling for the preview dialog window in your head:</p>
 <pre><code>&#60;link href="/css/livepreview-demo.css" rel="stylesheet" type="text/css"&#62;
 </code></pre>
-<p>The styles included is a default styles for the preview window that pops up to display the live preview only.  You may change this to make it more custom to your site if you wish.</p>
+<p><em>The styles included is a default styles for the preview window that pops up to display the live preview only.  You may change this to make it more custom to your site if you wish.</em></p>
 <p>Add a custom CSS class to the link (or DOM element with an added <i>href</i> attribute) you want to preview:</p>
 <pre><code>&#60;a href="http://www.bing.com" target="_blank" <strong>class="livepreview"</strong>&#62;Hover over to preview, click to link!/&#60;/a&#62;</code></pre>
 <p>Initialize and bind to your preferred CSS class on page ready:</p>
