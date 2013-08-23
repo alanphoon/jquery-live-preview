@@ -14,7 +14,7 @@
 
 <h2>Usage</h2>
 <p>Add the live preview plugin to your &#60;head&#62; tag or before the closing &#60;body&#62; tag:</p>
-<pre><code>&#60;script type="text/javascript" src="/js//jquery-live-preview.js"&#62;&#60;/script&#62;
+<pre><code>&#60;script type="text/javascript" src="/js/jquery-live-preview.js"&#62;&#60;/script&#62;
 </code></pre>
 <p>The styles included is a default styles for the preview window that pops up to display the live preview only.  You may change this to make it more custom to your site if you wish.</p>
 <p>Make sure to add the CSS styling for the preview dialog window in your head:</p>
