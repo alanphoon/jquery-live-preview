@@ -1,0 +1,58 @@
+/*** Styles for Live Preview Window ***/
+
+#livepreview_dialog
+{   
+    padding:0px;
+    height:200px;
+    width:300px;
+    background-color:#fff;
+    background-image:url('/images/icon_loading.gif');
+    background-repeat:no-repeat;
+    background-position:center center;
+    position:absolute;
+    border:solid 5px #999;
+    border-radius:5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius:5px;
+}
+
+#livepreview_dialog.left:after, #livepreview_dialog.left:before {
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+#livepreview_dialog.right:before {
+    left: 0px;
+    margin-left:-45px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-right-color: #999;
+    border-width: 20px;
+    top: 50%;
+    margin-top: -20px;
+}
+
+
+#livepreview_dialog.left:after {
+    right:0;
+    margin-right:-45px;
+    border-left-color: #999;
+    border-width: 20px;
+    top: 50%;
+    margin-top: -20px;
+}
+
+#livepreview_iframe {
+    box-shadow: inset 5px 5px 10px #666;
+    -moz-box-shadow: inset 5 5px 10px #666;
+    -webkit-box-shadow: inset 5 5px 10px #666;
+
+}
