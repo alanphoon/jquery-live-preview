@@ -20,7 +20,7 @@
 <p>Make sure to add the CSS styling for the preview dialog window in your head:</p>
 <pre>
 <code>
-<link href="/css/livepreview-demo.css" rel="stylesheet" type="text/css">
+&#60;link href="/css/livepreview-demo.css" rel="stylesheet" type="text/css"&#62;
 </code>
 </pre>
 <p>The styles included is a default styles for the preview window that pops up to display the live preview only.  You may change this to make it more custom to your site if you wish.</p>
