@@ -49,6 +49,15 @@
     <li><strong>position</strong> :: side to which the preview will open, left or right, default = right</li>
 </ul>
 
+<h3>Inline Data Attributes</h3>
+<p>The following data attributes may be used inline and will override any initialized or default settings:</p>
+<ul>
+    <li><strong>data-offset :: overrides offset setting</strong></li>
+    <li><strong>data-position :: overrides the position placement setting</strong></li>
+</ul>
+<p>Example:</p>
+<pre><code>&#60;a href="http://www.cnn.com" class="livepreview" data-offset="20" data-position="left" &#62;Hover over this link&#60;/a&#62;</pre></code>
+<p>The above will make sure that the live preview window is position to the left of the link and using an offset of 20px only.</p>
 <h2>Notes</h2>
 <p>- When this plugin is triggered (via the hover over event), the preview dialog is added to the body and the iframe is created using the href attribute of the element.  This means that you can add the appropriate class to any DOM element so long as the href attribute is present:</p>
 <pre><code>&lt;button class="livepreview" href="http://www.google.com"&gt;Hover over me!&lt;/button&gt;
