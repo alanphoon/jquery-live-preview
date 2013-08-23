@@ -14,7 +14,7 @@ Licensed under GNU GENERAL PUBLIC LICENSE
              viewWidth: 300,
              viewHeight: 200,
              position: 'right',
-             positionOffset: 50
+             positionOffset: 50,
          }
          var options = $.extend(defaults, options);
          //calculate appropriate scaling based on width.
@@ -46,6 +46,9 @@ Licensed under GNU GENERAL PUBLIC LICENSE
                 var currentOffset = o.positionOffset;
                 if(obj.attr("data-positionOffset"))
                     currentOffset = obj.attr("data-positionOffset");
+
+                if(obj.attr("data-scale"))
+                    s = obj.attr("data-scale");
 
                 var pos = $(this).offset();
                 var width = $(this).width();
