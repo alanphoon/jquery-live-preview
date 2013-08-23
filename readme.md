@@ -17,20 +17,13 @@
 <pre><code>&#60;a href="http://www.bing.com" target="_blank" <strong>class="livepreview"</strong>&#62;Hover over to preview, click to link!/&#60;/a&#62;</code></pre>
 <p>Initialize and bind to your preferred CSS class on page ready:</p>
 <pre><code>$(".livepreview").livePreview();</code></pre>
-<p>Make sure to add the CSS styling for the preview dialog window (feel free to make it your own look):</p>
-<pre><code>#livepreview_dialog
-    {
-        padding:0px;
-        height:200px;
-        width:300px;
-        background-color:#fff;
-        background-image:url('/images/icon_loading.gif');
-        background-repeat:no-repeat;
-        background-position:center center;
-        overflow:hidden;
-        position:absolute;
-    }</code>
+<p>Make sure to add the CSS styling for the preview dialog window in your head:</p>
+<pre>
+<code>
+<link href="/css/livepreview-demo.css" rel="stylesheet" type="text/css">
+</code>
 </pre>
+<p>The styles included is a default styles for the preview window that pops up to display the live preview only.  You may change this to make it more custom to your site if you wish.</p>
 
 <h2>Configuring</h2>
 <p>There are seven <i>optional</i> configurable options on initialization :</p>
