@@ -54,6 +54,7 @@
 <ul>
     <li><strong>data-offset</strong> :: overrides offset setting</li>
     <li><strong>data-position</strong> :: overrides the position placement setting</li>
+    <li><strong>data-scale</strong> :: overrides the scale setting</li>
 </ul>
 <p>Example:</p>
 <pre><code>&#60;a href="http://www.cnn.com" class="livepreview" data-offset="20" data-position="left" &#62;Hover over this link&#60;/a&#62;</pre></code>
