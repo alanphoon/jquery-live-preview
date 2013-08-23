@@ -36,13 +36,16 @@ Licensed under GNU GENERAL PUBLIC LICENSE
             var obj = $(this);
             var href = $(this).attr("href");
 
-            if($(this).attr("data-position"))
-                o.position = $(this).attr("data-position");
-
-            if($(this).attr("data-positionOffset"))
-                o.positionOffset = $(this).attr("data-positionOffset");
+           
             
             obj.hover(function() {
+
+                 if(obj.attr("data-position"))
+                    o.position = obj.attr("data-position");
+
+                if(obj.attr("data-positionOffset"))
+                    o.positionOffset = obj.attr("data-positionOffset");
+
                 var pos = $(this).offset();
                 var width = $(this).width();
                 var leftpos = pos.left + width + o.positionOffset;
