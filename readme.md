@@ -11,7 +11,7 @@
 
 <h2>Limitations</h2>
 <p>Certain sites may have set their X-FRAME-OPTIONS header policy to SAMEORGIN or DENY.  This is specifically to prevent other sites from iframing their site for obvious reasons.  If that is the case, this plugin will not work, and it's best to respect the site owner's wishes. </p>
-
+<p>This plugin will work with Internet Explorer 10 and above.  Previous versions of IE do not support the CSS transform property used in this plugin. Suggestion is to use modernizr to disable this plugin if CSS transforms are not supported by the browser.</p>
 <h2>Usage</h2>
 <p>Add the live preview plugin to your &#60;head&#62; tag or before the closing &#60;body&#62; tag:</p>
 <pre><code>&#60;script type="text/javascript" src="/js/jquery-live-preview.js"&#62;&#60;/script&#62;
