@@ -9,6 +9,7 @@ Licensed under GNU GENERAL PUBLIC LICENSE
   $.fn.extend({
      livePreview: function(options){
          var defaults = {
+             trigger: 'hover',
              targetWidth : 1000,
              targetHeight: 800,
              viewWidth: 300,
@@ -16,11 +17,14 @@ Licensed under GNU GENERAL PUBLIC LICENSE
              position: 'right',
              positionOffset: 50,
          }
+
          var options = $.extend(defaults, options);
          //calculate appropriate scaling based on width.
          var scale_w = (options.viewWidth / options.targetWidth);
          var scale_h = (options.viewHeight / options.targetHeight);
          var scale_f = 1;
+         var preview_id = 'livepreview_dialog';
+
          if(typeof options.scale != 'undefined')
              scale_f = options.scale;
          else
@@ -30,14 +34,27 @@ Licensed under GNU GENERAL PUBLIC LICENSE
              else
                  scale_f = scale_h;
          }
+
          return this.each(function() {
             var o = options;
             var s = scale_f;
             var obj = $(this);
             var href = $(this).attr("href");
+            var triggerType = options.trigger;
 
-            
-            obj.hover(function() {
+            if(obj.attr("data-trigger")) {
+                triggerType = obj.attr("data-trigger");
+            }
+
+            if(triggerType != 'click') {
+                triggerType = 'mouseenter';
+            }
+
+            obj.on(triggerType, function() {
+
+                if( (triggerType == 'click') && ($('#' + preview_id).length == 0) ) {
+                    event.preventDefault();
+                }
 
                 var currentPos = o.position;
                  if(obj.attr("data-position"))
@@ -58,14 +75,15 @@ Licensed under GNU GENERAL PUBLIC LICENSE
                 var toppos = pos.top - (o.viewHeight/2);
                 //hover on 
                 $('body').append('<div id="livepreview_dialog" class="' + currentPos + '" style="display:none; padding:0px; left: ' + leftpos + 'px; top:' + toppos + 'px; width: ' + o.viewWidth + 'px; height: ' + o.viewHeight + 'px"><div class="livepreview-container" style="overflow:hidden; width: ' + o.viewWidth + 'px; height: ' + o.viewHeight + 'px"><iframe id="livepreview_iframe" src="' + href + '" style="height:' + o.targetHeight + 'px; width:' + o.targetWidth + 'px;-moz-transform: scale('+ s + ');-moz-transform-origin: 0 0;-o-transform: scale('+ s + ');-o-transform-origin: 0 0;-webkit-transform: scale('+ s + ');-webkit-transform-origin: 0 0;"></iframe></div></div>');
-                $('#livepreview_dialog').fadeIn(100);
-            },
-            function() {
-                //hover off
-                
-                $("#livepreview_dialog").remove();
-                
+                $('#' + preview_id).fadeIn(100);
+
             });
+
+            obj.on('mouseleave', function() {
+                $('#' + preview_id).remove();
+            });
+            
+
          });
      }
   });
