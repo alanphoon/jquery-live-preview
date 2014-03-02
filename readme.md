@@ -31,6 +31,7 @@
 <h2>Configuring</h2>
 <p>There are seven <i>optional</i> configurable options on initialization :</p>
 <pre><code>$(".livepreview").livePreview({
+    trigger: 'hover',
     viewWidth: 300,  
     viewHeight: 200,  
     targetWidth: 1000,  
@@ -40,6 +41,7 @@
     position: 'left'
 });</code></pre>
 <ul>
+    <li><strong>trigger</strong> :: trigger event, 'hover' or 'click', default = 'hover'</li>
     <li><strong>viewWidth</strong> :: the preview dialog width,  default = 300px</li>
     <li><strong>viewHeight</strong> :: the preview dialog height,  default = 200px</li>
     <li><strong>targetWidth</strong> :: the viewport size width of the site you are previewing, default = 1000px</li>
@@ -52,6 +54,7 @@
 <h3>Inline Data Attributes</h3>
 <p>The following data attributes may be used inline and will override any initialized or default settings:</p>
 <ul>
+    <li><strong>data-trigger</strong> :: overrides trigger setting</li>
     <li><strong>data-offset</strong> :: overrides offset setting</li>
     <li><strong>data-position</strong> :: overrides the position placement setting</li>
     <li><strong>data-scale</strong> :: overrides the scale setting</li>
@@ -60,7 +63,8 @@
 <pre><code>&#60;a href="http://www.cnn.com" class="livepreview" data-offset="20" data-position="left" &#62;Hover over this link&#60;/a&#62;</pre></code>
 <p>The above will make sure that the live preview window is position to the left of the link and using an offset of 20px only.</p>
 <h2>Notes</h2>
-<p>- When this plugin is triggered (via the hover over event), the preview dialog is added to the body and the iframe is created using the href attribute of the element.  This means that you can add the appropriate class to any DOM element so long as the href attribute is present:</p>
+<p>- The plugin can be triggered via a hover or click event.  On a hover event, when the user hovers over the element, the preview will show.  On a click event, when the user clicks on the element, the preview will show. Clicking again on the element while the preview is open will trigger the default event of that element (for example, if its a link, it will go to that link).  On both events, when the user hovers away from the element, the preview will close.
+<p>- When this plugin is triggered, the preview dialog is added to the body and the iframe is created using the href attribute of the element.  This means that you can add the appropriate class to any DOM element so long as the href attribute is present:</p>
 <pre><code>&lt;button class="livepreview" href="http://www.google.com"&gt;Hover over me!&lt;/button&gt;
 &lt;img class="livepreview" src="/images/someimage.jpg" href="http://www.yahoo.com" /&gt;</code></pre>
 <p>- For now, please note that the preview dialog that is dynamically created has a fixed <strong>id</strong> name of <i>livepreview_dialog</i><br/>
