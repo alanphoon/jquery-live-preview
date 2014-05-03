@@ -1,6 +1,6 @@
 /***********************************************
 Jquery Live Link Preview Plugin
-Copyright (c) 2012 Alan Phoon, www.ampedupdesigns.com  
+Copyright (c) 2014 Alan Phoon, www.ampedupdesigns.com  
 This notice MUST stay intact for legal use and may not be modified.
 
 Licensed under GNU GENERAL PUBLIC LICENSE
@@ -48,6 +48,9 @@ Licensed under GNU GENERAL PUBLIC LICENSE
 
             if(triggerType != 'click') {
                 triggerType = 'mouseenter';
+                obj.on('click', function() {
+                    $('#' + preview_id).remove();
+                });
             }
 
             obj.on(triggerType, function() {
