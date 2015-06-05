@@ -3,6 +3,9 @@
 <p>The Jquery Live Link Preview Plugin is a simple Jquery Plugin that allows you to see a <strong>live</strong> scaled preview of the site you are linking to in a pop-up dialog style window prior to you clicking on it. </p>
 <p>Use on any link (or DOM element with a href attribute) by adding the corresponding css class, no more prepping preview images for user hover-over previews; let the user see exactly what they will see before they click on the link.</p>
 
+<h2>Last Revision Update</h2>
+<p>v1.1.0 - This revision added the ability to position the preview window on "top" or "bottom" of the target element.  Note that this positions to the exact middle (width) of the target element.</p> 
+
 <h2>Requirements</h2>
 <ul>
     <li>Jquery must be loaded.</li>
@@ -46,7 +49,7 @@
     <li><strong>targetHeight</strong> :: the viewport size height of the site you are previewing, default = 800px</li>
     <li><strong>scale</strong> :: the scaling of the viewport size of the site you are previewing (this is the CSS transform scale property),  default = calculated automatically. Notes: If no scaling is specified, then the scaling is automatically calculated to provide the best fit to the preview dialog window size.</li>
     <li><strong>offset</strong> :: the offset from the target in pixels, default = 40px</li>
-    <li><strong>position</strong> :: side to which the preview will open, top, bottom, left, right, default = right</li>
+    <li><strong>position</strong> :: side to which the preview will open "top", "bottom", "left", "right": default = right</li>
 </ul>
 
 <h3>Inline Data Attributes</h3>
