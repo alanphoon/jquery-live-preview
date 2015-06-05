@@ -1,10 +1,22 @@
-/***********************************************
-Jquery Live Link Preview Plugin
-Copyright (c) 2014 Alan Phoon, www.ampedupdesigns.com  
-This notice MUST stay intact for legal use and may not be modified.
+/* ==========================================================
+ * jquery-live-preview.js v1.1.0
+ * https://github.com/alanphoon/jquery-live-preview
+ * ==========================================================
+ * Copyright 2015 Alan Phoon, www.ampedupdesigns.com
+ * Licensed under GNU GENERAL PUBLIC LICENSE v3
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, http://www.gnu.org/licenses/.
+ * ========================================================== */
 
-Licensed under GNU GENERAL PUBLIC LICENSE
-***********************************************/
 (function($) {
   $.fn.extend({
      livePreview: function(options) {
@@ -16,7 +28,7 @@ Licensed under GNU GENERAL PUBLIC LICENSE
              viewWidth: 300,
              viewHeight: 200,
              position: 'right',
-             positionOffset: 50,
+             positionOffset: 40,
          };
 
          var options = $.extend(defaults, options);
@@ -59,10 +71,24 @@ Licensed under GNU GENERAL PUBLIC LICENSE
 
              var pos = $(this).offset();
              var width = $(this).width();
-             var leftpos = pos.left + width + currentOffset;
-             if(currentPos == 'left')
-                 leftpos = pos.left - options.viewWidth - currentOffset;
+             var height = $(this).height();
              var toppos = pos.top - (options.viewHeight/2);
+             var leftpos = pos.left + width + currentOffset;
+
+             if(currentPos == 'left') {
+                leftpos = pos.left - options.viewWidth - currentOffset;
+             }
+            
+             if(currentPos == 'top') {
+                leftpos = pos.left + (width/2) - (options.viewWidth/2);
+                toppos = pos.top - options.viewHeight - currentOffset;
+             }
+
+             if(currentPos == 'bottom') {
+                leftpos = pos.left + (width/2) - (options.viewWidth/2);
+                toppos = pos.top + (height/2) + currentOffset;
+             }
+             
              //hover on 
              $('body').append('<div id="livepreview_dialog" class="' + currentPos + '" style="display:none; padding:0px; left: ' + leftpos + 'px; top:' + toppos + 'px; width: ' + options.viewWidth + 'px; height: ' + options.viewHeight + 'px"><div class="livepreview-container" style="overflow:hidden; width: ' + options.viewWidth + 'px; height: ' + options.viewHeight + 'px"><iframe id="livepreview_iframe" src="' + href + '" style="height:' + options.targetHeight + 'px; width:' + options.targetWidth + 'px;-moz-transform: scale('+ s + ');-moz-transform-origin: 0 0;-o-transform: scale('+ s + ');-o-transform-origin: 0 0;-webkit-transform: scale('+ s + ');-webkit-transform-origin: 0 0;"></iframe></div></div>');
              $('#' + preview_id).fadeIn(100);
@@ -95,4 +121,3 @@ Licensed under GNU GENERAL PUBLIC LICENSE
      }
   });
 })(jQuery);
-

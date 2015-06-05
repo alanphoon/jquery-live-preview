@@ -9,9 +9,7 @@
     <li>Modern Browsers that support CSS3 3D Transform properties (Chrome, Firefox, Safari, IE10+).</li>
 </ul>
 
-<h2>Limitations</h2>
-<p>Certain sites may have set their X-FRAME-OPTIONS header policy to SAMEORGIN or DENY.  This is specifically to prevent other sites from iframing their site for obvious reasons.  If that is the case, this plugin will not work, and it's best to respect the site owner's wishes. </p>
-<p>This plugin will work with Internet Explorer 10 and above.  Previous versions of IE do not support the CSS transform property used in this plugin. Suggestion is to use modernizr to disable this plugin if CSS transforms are not supported by the browser.</p>
+
 <h2>Usage</h2>
 <p>Add the live preview plugin to your &#60;head&#62; tag or before the closing &#60;body&#62; tag:</p>
 <pre><code>&#60;script type="text/javascript" src="/js/jquery-live-preview.js"&#62;&#60;/script&#62;
@@ -47,8 +45,8 @@
     <li><strong>targetWidth</strong> :: the viewport size width of the site you are previewing, default = 1000px</li>
     <li><strong>targetHeight</strong> :: the viewport size height of the site you are previewing, default = 800px</li>
     <li><strong>scale</strong> :: the scaling of the viewport size of the site you are previewing (this is the CSS transform scale property),  default = calculated automatically. Notes: If no scaling is specified, then the scaling is automatically calculated to provide the best fit to the preview dialog window size.</li>
-    <li><strong>offset</strong> :: the offset from the target in pixels, default = 50px</li>
-    <li><strong>position</strong> :: side to which the preview will open, left or right, default = right</li>
+    <li><strong>offset</strong> :: the offset from the target in pixels, default = 40px</li>
+    <li><strong>position</strong> :: side to which the preview will open, top, bottom, left, right, default = right</li>
 </ul>
 
 <h3>Inline Data Attributes</h3>
@@ -63,6 +61,9 @@
 <p>Example:</p>
 <pre><code>&#60;a href="http://www.cnn.com" class="livepreview" data-offset="20" data-position="left" &#62;Hover over this link&#60;/a&#62;</pre></code>
 <p>The above will make sure that the live preview window is position to the left of the link and using an offset of 20px only.</p>
+<h2>Limitations</h2>
+<p>Certain sites may have set their X-FRAME-OPTIONS header policy to SAMEORGIN or DENY.  This is specifically to prevent other sites from iframing their site for obvious reasons.  If that is the case, this plugin will not work, and it's best to respect the site owner's wishes. </p>
+<p>This plugin will work with Internet Explorer 10 and above.  Previous versions of IE do not support the CSS transform property used in this plugin. Suggestion is to use modernizr to disable this plugin if CSS transforms are not supported by the browser.</p>
 <h2>Notes</h2>
 <p>- The plugin can be triggered via a hover or click event.  On a hover event, when the user hovers over the element, the preview will show.  On a click event, when the user clicks on the element, the preview will show. Clicking again on the element while the preview is open will trigger the default event of that element (for example, if its a link, it will go to that link).  On both events, when the user hovers away from the element, the preview will close.
 <p>- When this plugin is triggered, the preview dialog is added to the body and the iframe is created using the href attribute of the element.  This means that you can add the appropriate class to any DOM element so long as the href attribute is present:</p>
