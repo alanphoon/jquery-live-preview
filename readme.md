@@ -8,7 +8,7 @@
 
 <h2>Requirements</h2>
 <ul>
-    <li>Jquery must be loaded.</li>
+    <li>JQuery must be loaded.</li>
     <li>Modern Browsers that support CSS3 3D Transform properties (Chrome, Firefox, Safari, IE10+).</li>
 </ul>
 
@@ -21,7 +21,7 @@
 <pre><code>&#60;link href="/css/livepreview-demo.css" rel="stylesheet" type="text/css"&#62;
 </code></pre>
 <p><em>The styles included are default styles for the live preview window that pops up to display the live preview only.  You may modify this to make it more custom to your site if you wish.</em></p>
-<p>Add a custom CSS class to the link (or DOM element with an added <i>href</i> attribute) you want to preview:</p>
+<p>Add a custom CSS class to the link (or DOM element with an added <i>href</i> attribute) you want to preview (optional, you can always just bind to all your links):</p>
 <pre><code>&#60;a href="http://www.bing.com" target="_blank" <strong>class="livepreview"</strong>&#62;Hover over to preview, click to link!/&#60;/a&#62;</code></pre>
 <p>Initialize and bind to the CSS class you used above on page ready:</p>
 <pre><code>$(document).ready(function() { 
