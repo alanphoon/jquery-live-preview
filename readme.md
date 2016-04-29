@@ -56,7 +56,7 @@
 <p>The following data attributes may be used inline and will override any initialized or default settings:</p>
 <ul>
     <li><strong>data-trigger</strong> :: overrides trigger setting</li>
-    <li><strong>data-offset</strong> :: overrides offset setting</li>
+    <li><strong>data-positionOffset</strong> :: overrides offset setting</li>
     <li><strong>data-position</strong> :: overrides the position placement setting</li>
     <li><strong>data-scale</strong> :: overrides the scale setting</li>
     <li><strong>data-preview-url</strong> :: overrides url to show in the preview instead of the href attr</li>
